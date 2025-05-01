@@ -13,7 +13,9 @@ A SaaS-ready boilerplate built on top of the official Laravel + [Livewire](https
   - Selecting a **country**
   - Choosing a **currency**
   - Setting a **unit of measurement** (e.g. kg, lbs, liters)
-
+- **Superadmin Subscription Plan Management**:
+  - The **superadmin** can manage subscriptions using Paddle (set up with [Laravel Cashier for Paddle](https://laravel.com/docs/9.x/cashier#paddle)). This includes the ability to view and manage subscription plans, and manage the billing process for tenants.
+  
 ## Installation
 
 ```bash
@@ -44,6 +46,11 @@ php artisan serve
 - **Tenant**:  
   Email: `john@acme.com`  
   Password: `password`
+
+## Notes
+
+- This application is provided **as is**, with **no guarantees** regarding security, performance, or functionality. It is **meant for developers** to use as a base for their own applications.
+- Developers **should thoroughly test** the application for **security**, **functionality**, and **performance** before using it in a production environment.
 
 ## License
 
