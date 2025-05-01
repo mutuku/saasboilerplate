@@ -83,6 +83,12 @@ class UserManager extends Component
 
     public function create()
     {
+
+        if (!$this->canCreateUser()) {
+            $this->dispatch('notify', type: 'error', message: 'You do not have permission to create users.');
+            return;
+        }
+
         $this->validate();
 
         try {
@@ -257,6 +263,14 @@ class UserManager extends Component
         } else {
             $this->reset(['tenant_id']);
         }
+    }
+
+    protected function canCreateUser(): bool
+    {
+        $currentUser = Auth::user();
+
+        // Only super admin or tenant admin can create users
+        return $currentUser->is_super_admin || $currentUser->is_tenant_admin;
     }
 
     protected function canManageUser(User $user): bool

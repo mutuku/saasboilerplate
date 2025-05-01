@@ -73,6 +73,7 @@
                             </div>
                         </div>
                     </div>
+                    @if(auth()->user()->is_super_admin || auth()->user()->is_tenant_admin)
                     <button
                         wire:click="resetForm"
                         @click="activeTab = 'form'"
@@ -80,6 +81,7 @@
                     >
                         Create New User
                     </button>
+                    @endif
                 </div>
 
                 {{-- User Table --}}
