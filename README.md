@@ -33,3 +33,22 @@ php artisan migrate --seed
 
 # 5. Serve the application
 php artisan serve
+```
+
+## Default Credentials
+
+- **Superadmin**:  
+  Email: `admin@example.com`  
+  Password: `password`
+
+- **Tenant**:  
+  Email: `john@acme.com`  
+  Password: `password`
+
+## License
+
+The Laravel + Livewire SaaS Boilerplate is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Developed By
+
+[Agile.co.ke](https://agile.co.ke)
